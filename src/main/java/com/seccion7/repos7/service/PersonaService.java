@@ -15,7 +15,7 @@ public class PersonaService {
 
     public Persona guardar(Persona persona){
         return personaRepository.create(persona);
-       
+
     }
 
     public List<Persona> listartodas()
@@ -39,5 +39,14 @@ public class PersonaService {
     {
         personaRepository.delete(id);
         return "Persona eliminada";
+    }
+
+    /*public Persona buscarPorRut(String rut) {
+        // TODO Auto-generated method stub
+        return PersonaRepository.readByRut(rut);
+    }*/
+
+    public Persona buscarPorRut(String rut) {
+        return personaRepository.readByRut(rut);
     }
 }

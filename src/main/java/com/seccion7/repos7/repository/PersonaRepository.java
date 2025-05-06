@@ -9,7 +9,7 @@ import com.seccion7.repos7.model.Persona;
 
 @Repository
 public class PersonaRepository {
-    private List<Persona> personas=new ArrayList<>();
+    private List<Persona> personas = new ArrayList<>();
 
 
     //NO TIENE NADA QUE VER CON MS ES SOLO PRUEBA
@@ -66,6 +66,18 @@ public class PersonaRepository {
             personas.remove(kill);
         }
 
+
+        return null;
+    }
+
+    public Persona readByRut(String rut) {
+        // TODO Auto-generated method stub
+        // throw new UnsupportedOperationException("Unimplemented method 'readByRut'");
+        for(Persona persona: personas) {
+            if(persona.getRut().equals(rut)) {
+                return persona;
+            }
+        }
 
         return null;
     }
